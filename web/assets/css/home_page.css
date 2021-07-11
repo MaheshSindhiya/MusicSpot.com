@@ -1,0 +1,90 @@
+.main_part{
+    background: #555;
+    height: 100%;
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+}
+
+.main_part .main_left{
+    background: #3c3b3b;
+    height: 100%;
+    width: 20%;
+}
+
+.main_part .main_left .user_ing {
+    margin-top: 20px;
+    display: grid;
+    place-content: center;
+    
+}
+
+.main_part .main_left .user_ing img
+{
+    top: 0px;
+    left: 0px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-top: 25px;
+}
+
+.main_part .main_left h3
+{
+    width: 100%;
+     text-align: center;
+     font-size: 18px;
+     padding: 20px 0;
+     font-weight: 500;
+     color: #555;
+     line-height: 1.2em;
+}
+
+.main_part .main_left h3 span
+{
+    font-size: 14px;
+    color: #696262;
+    font-weight: 400;
+}
+
+.main_part .main_left .playlists{
+    display: grid;
+    place-content: center;
+    margin-bottom: 50px;
+}
+
+.main_part .main_left .playlists ul li{
+    list-style-type: none;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.main_part .main_left .playlists ul li img{
+    max-width: 20px;
+    margin-right: 10px;
+    opacity: 0.5;
+    transition: 00.5s;
+}
+
+.main_part .main_left .playlists ul li:hover img{
+    opacity: 1;
+}
+
+.main_part .main_left .playlists ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.main_part .main_left .playlists ul li:hover a{
+    color: #ff5d94;
+}
+
+.main_part .main_right{
+    background: #14213d;
+    height: 100%;
+    width: 70%;
+}

@@ -1,0 +1,73 @@
+@font-face{
+    font-family: 'roboto';
+    src: url('../assets/fonts/Roboto-MediumItalic.ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #d3d3d3;
+}
+
+:root{
+    --pri_col: #14213d;
+    --sec_col: #fca311;
+    --ex1: black;
+    --ex2: white;
+}
+
+header{
+    height: 75px;
+    /*background-color: var(--ex2);*/ 
+    width: 100%;
+}
+
+.links a{
+    font-family: monospace;
+    text-decoration: none;
+    color: var(--ex2);
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: none;
+    border-radius: 15px;
+    padding: 7px;
+    transition: background-color 2s;
+}
+
+.links a:hover{
+    background-color: var(--ex2);
+    color: var(--pri_col);
+    border-radius: 15px;
+    padding: 7px;
+    display: inline;
+}
+
+.logo{
+    float: left;
+    margin-left: 20px;
+}
+
+.links{  
+    float: right;
+    margin-top: 29px;
+    margin-bottom: auto;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.first{
+    /* background-image: url(../images/wave.jpg);
+    background-size: contain; */
+    width: 100%;
+    height: 595px;
+}
+
+.first h1{
+    padding-top: 210px;
+    padding-left: 400px;
+    font-size: 50px;
+    color: white;
+}

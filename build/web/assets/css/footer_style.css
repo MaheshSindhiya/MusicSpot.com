@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.footer{
+    background-color: white;
+    width: 100%;
+    align-content: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.footer_pages{
+    display: grid;
+    place-content: center;
+}
+a{
+    text-decoration: none;
+}

@@ -1,0 +1,839 @@
+@font-face{
+    font-family: 'roboto';
+    src: url('../font/Roboto-MediumItalic.ttf');
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'roboto';
+    /* border: 3px solid red; */
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #FF8A65
+}
+
+.header{
+    display: flex;
+    background-color: #181a1d;
+    padding: 5px;
+    position: fixed;
+    top: 0;
+    height: 40px;
+    width: 100%;
+    z-index: 1;
+}
+
+.header_left, .header_right{
+    width: 20%;
+    display: grid;
+    place-items: center;
+}
+
+.search{
+    width: 60%;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.header .search form{
+    position: relative;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: all 1s;
+    width: 200px;
+    height: 35px;
+    background: white;
+    box-sizing: border-box;
+    border-radius: 25px;
+    padding: 0px;
+}
+
+.header .search form input{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    line-height: 30px;
+    outline: 0;
+    border: 0;
+    display: none;
+    font-size: 1em;
+    border-radius: 20px;
+    padding: 10px 10px;
+}
+
+.search .fa{
+    box-sizing: border-box;
+    padding: 4px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 3px;
+    right: 2px;
+    border-radius: 50%;
+    color: #07051a;
+    text-align: center;
+    font-size: 1.2em;
+    transition: all 1s;
+}
+
+.header .search form:hover{
+    width: 400px;
+    cursor: pointer;
+}
+
+.header .search form:hover input{
+    display: block;
+}
+
+.header .search form:hover .fa{
+    background: #07051a;
+    color: white;
+}
+
+.action{
+    position: absolute;
+    top: 5px;    
+    right: 100px;    
+}
+
+.action .profile{
+    position: relative;
+    top: -9px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.action .profile img{
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border: none;
+    border-radius: 50%;
+}
+
+.action .menu{
+    position: absolute;
+    top: 60px;
+    right: -10px;
+    padding: 10px 20px;
+    margin-right: 10px;
+    background: #d3d3d3;
+    width: 140px;
+    box-sizing: 0 5px 25px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.action .menu.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.action .menu::before{
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: 28px;
+    width: 20px;
+    height: 20px;
+    background: #d3d3d3;
+    transform: rotate(45deg);
+}
+
+.action .menu h3{
+     width: 100%;
+     text-align: center;
+     font-size: 18px;
+     padding: 20px 0;
+     font-weight: 500;
+     color: #555;
+     line-height: 1.2em;
+}
+
+.action .menu h3 span{
+    font-size: 14px;
+    color: #ec6969;
+    font-weight: 400;    
+}
+
+.action .menu ul li{
+    list-style-type: none;
+    padding: 10px 0;
+    border-top: 1px solid black;
+    display: flex;
+    align-items: center;
+}
+
+.action .menu ul li img{
+    max-width: 20px;
+    margin-right: 10px;
+    opacity: 0.5;
+    transition: 00.5s;
+}
+
+.action .menu ul li:hover img{
+    opacity: 1;
+}
+
+.action .menu ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.action .menu ul li:hover a{
+    color: #ff5d5d;
+}
+
+/* --------------------- */
+
+.main_part{
+    background: #555;
+    height: 100%;
+    width: 100%;
+    margin: 50px 0 0 0;
+    display: flex;
+}
+
+.main_part .main_left{
+    background: #3c3b3b;
+    /* height: 100%; */
+    width: 20%;
+}
+
+.main_part .main_left .user_ing {
+    margin-top: 20px;
+    display: grid;
+    place-content: center;
+    
+}
+
+.main_part .main_left .user_ing img
+{
+    top: 0px;
+    left: 0px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-top: 25px;
+    border: none;
+    border-radius: 50%;
+}
+
+.main_part .main_left h3
+{
+    width: 100%;
+     text-align: center;
+     font-size: 18px;
+     padding: 5px 0;
+     font-weight: 500;
+     color: #555;
+     line-height: 1.2em;
+}
+
+.main_part .main_left h3 span
+{
+    font-size: 14px;
+    color: #696262;
+    font-weight: 400;
+}
+
+.upload_action {
+    height: 60px;
+    width: 100%;
+    display: grid;
+    margin: 20px 0;
+    place-content: center;
+}
+
+.upload_action a {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    text-decoration: none;
+    background: #fca311;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.upload_action a:hover{
+    background: yellowgreen;
+}
+
+.main_part .main_left .playlists{
+    display: grid;
+    place-content: center;
+    margin-bottom: 50px;
+}
+
+.main_part .main_left .playlists ul li{
+    list-style-type: none;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.main_part .main_left .playlists ul li img{
+    max-width: 20px;
+    margin-right: 10px;
+    opacity: 0.5;
+    transition: 00.5s;
+}
+
+.main_part .main_left .playlists ul li:hover img{
+    opacity: 1;
+}
+
+.main_part .main_left .playlists ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.main_part .main_left .playlists ul li:hover a{
+    color: #ff5d94;
+}
+
+.main_part .main_right{
+    background: #555555;
+    height: 100%;
+    width: 80%;
+}
+
+.main_right .line-1{
+    display: flex;
+    justify-content: space-between;
+    overflow-y: auto;
+    height: 300px;
+}
+
+.main_right .line-2{
+    /* display: flex;
+    justify-content: space-between;
+    overflow-y: auto;
+    height: 200px; */
+    display: flex;
+    justify-content: flex-start;
+    overflow-y: auto;
+    height: 230px;
+}
+
+.main_right .line-3{
+    display: flex;
+    justify-content: space-between;
+    overflow-y: auto;
+    height: 200px;
+}
+
+::-webkit-scrollbar{
+    width: 0px;
+}
+
+.main_right .line-1::-webkit-scrollbar{
+    width: 0px;
+}
+
+.main_right .line-1::-webkit-scrollbar-thumb{
+    border-radius: 0px;
+}
+
+/* line-1 */
+.main_right .conteiner-1{
+    padding: 10px 10px;
+}
+
+.main_right .conteiner-1 .werper{
+    height: 235px;
+    width: 200px;
+    background-color: #fca311;
+    color: #fff;
+    align-content: center;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px;
+}
+
+.main_right .conteiner-1 .werper img{
+    height: 200px;
+    width: 200px;
+    top: 0px;
+    left: 0px;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+}
+
+.main_right .conteiner-1 .werper h4{
+    margin: 5px;
+}
+
+/* line-2 */
+.main_right .conteiner-2{
+    padding: 10px 10px;
+}
+
+.main_right .conteiner-2 .werper{
+    height: 175px;
+    width: 150px;
+    background-color: #fca311;
+    color: white;
+    align-content: center;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px;
+}
+
+.main_right .conteiner-2 .werper img{
+    height: 150px;
+    width: 150px;
+    top: 0px;
+    left: 0px;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+}
+
+.main_right .conteiner-2 .werper h4{
+    margin: 0 0 0 5px;
+}
+
+.main_right .conteiner-2{
+    padding: 10px 10px;
+}
+
+/* line-3 */
+.main_right .conteiner-3 .werper{
+    height: 125px;
+    width: 125px;
+    background-color: #fca311;
+    align-content: center;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.main_right .conteiner-3 .werper img{
+    height: 125px;
+    width: 125px;
+    top: 0px;
+    left: 0px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.main_right .conteiner-3 .werper h4{
+    margin: 5px;
+    color: #fff;
+    width: 100%;
+}
+
+/* .main_right li:hover{
+    box-shadow: none;
+    transform: scale(0.98) translateY(5px);
+} */
+
+.main_right .list audio::-webkit-media-controls-volume-slider {
+    margin: 15px 0;
+    padding: 0;
+    background-color: chartreuse;
+    color: #ff5d5d;
+}
+
+/* -----M_BAR----- */
+.music_bar{
+    top: 595px;
+    bottom: 0;
+    position: fixed;
+    height: 50px;
+    width: 100%;
+}
+
+.main{
+    height: 50px;
+    margin-top: auto;
+    display: flex;
+    padding: 5px 0;
+    background: linear-gradient(to right, #5D6D7E, #566573);
+}
+.main button{
+	padding: 10px 12px;
+	margin: 0 10px;
+}
+.main #logo{
+	position: absolute;
+	top: 10px;
+	left: 30px;
+	font-size: 25px;
+	color: #ccc;
+}
+.main #logo i{
+	margin-right: 15px;
+}
+
+/* left & right part */
+.left_title{
+	position: relative; 
+    height: 100%;
+    width: 22%;
+    display: flex;
+}
+
+.m_ber_right{
+	position: relative;
+    height: 100%;
+    color: white;
+    width: 56%;
+    display: flex;
+    margin: 0px 5px;
+    align-items: center;
+   
+}
+
+.m_ber_left{
+	position: relative;
+    height: 100%;
+    width: 22%;
+    display: grid;
+    place-content: center;   
+}
+
+/* song image */
+.left_title img{
+    height: 50px;
+    width: 50px;
+    margin-left: 20px;
+    box-shadow: 1px 0px 20px 12px rgb(240 240 240 / 20%);
+    
+}
+
+.title{
+    margin-left: 15px;
+    display: grid;
+    place-content: center;
+}
+
+.progress_bar
+{
+    height: 3px;
+    width: 56%;
+    background: white;
+    margin: 25px 20px;
+    display: flex;
+}
+
+.processed
+{
+    height: 3px;
+    background: orange;
+    width: 0%;
+    transition: all 0.5s;
+}
+
+/* volume part */
+.left_title .volume{
+	position: absolute;
+	bottom: 10%;
+	left: 0;
+	width: 100%;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+}
+.left_title .volume p{
+	font-size: 15px;
+}
+.left_title .volume i{
+	cursor: pointer;
+	padding: 8px 12px;
+	background: #FF8A65;
+}
+.left_title .volume i:hover{
+	background: rgba(245,245,245,0.1);
+}
+.volume #volume_show{
+	padding: 8px 12px;
+	margin: 0 5px 0 0;
+	background: rgba(245,245,245,0.1);
+}
+
+/* right part */
+ .m_ber_right .middle{
+    display: flex;
+	align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+}
+.m_ber_right .middle button{
+	border: none;
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;	
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	outline: none;
+	transition: 0.5s;
+	background: rgba(255,255,255,0.1);
+}
+
+.m_ber_right .duration p{
+	color: #fff;
+	font-size: 15px;
+	margin-left: 20px;
+}
+.m_ber_right #auto{
+	font-size: 18px;
+	cursor: pointer;
+	margin-top: 45px;
+	border: none;
+	padding: 10px 14px;
+	color: #fff;
+	background: rgba(255,255,255,0.2);
+	outline: none;
+	border-radius: 10px;
+}
+.m_ber_right #auto i{
+	margin-left: 8px;
+}
+#play{
+	background: #FF8A65;
+}
+.m_ber_right button:hover{
+	background: #FF8A65;
+}
+.m_ber_right i:before{
+	color: #fff;
+	font-size: 20px;
+}
+
+.m_ber_right .show_song_no{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  color: #fff;
+  border-radius: 5px;
+  background: rgba(255,255,255,0.2);
+}
+.m_ber_right .show_song_no p:nth-child(2){
+	margin: 0 5px;
+}
+
+/* .playlist.html */
+.main_right .upper, .profile_upper{
+    height: 215px;
+    width: auto;
+    box-sizing: border-box;
+    margin: 25px 0 0 20px;
+    display: flex;
+}
+
+.main_right .upper img{
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.main_right .upper .detail{
+    margin: 20px 0 0 10px;
+    top: 100px;
+    position: relative;
+    height: 80px;
+    width: auto;
+}
+
+.upper .detail h2{
+    font-size: 35px;
+    padding: 5px 0;
+}
+
+.main_right .bottum, .profile_bottom{
+    padding: 20px;
+    height: auto;
+    width: auto;
+}
+
+.bottum .S_list{
+    display: flex;
+    width: 100%;
+    position: relative;
+    margin: 0 0 20px 0;
+}
+
+.S_list #simg{
+    height: 75px;
+    border-radius: 10px;
+    width: 75px;
+    margin: 0 10px 0 0;
+    object-fit: cover;
+    background: white
+}
+
+.S_list .detail{
+    color: white;
+    width: 30%;
+    position: relative;
+    top: 20px;
+    height: 100%;
+}
+
+.S_list .detail h2{
+    font-size: 22px;
+}
+
+.S_list audio{
+    height: 35px;
+    width: 50%;
+    position: relative;
+    top: 25px;
+    margin: 0 10px;
+}
+
+.S_list #like, #plist{
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin: 0 10px;
+    position: relative;
+    top: 35px;
+    filter: invert(100%) sepia(94%) saturate(929%) hue-rotate(183deg) brightness(121%) contrast(101%);
+}
+
+/* artist profile..... */
+
+.main_right .upper_wreper, .u_wereper{
+    height: auto;
+    width: 100%;
+    color: white;
+}
+
+.main_right .profile_upper img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin: 0px 0 0 60px;
+    object-fit: cover;
+}
+
+.main_right .profile_upper .detail {
+    margin: 10px 0 0 20px;
+    position: relative;
+    height: 80px;
+    line-height: 25px;
+    width: auto;
+}
+
+.profile_upper .detail h2 {
+    font-size: 40px;
+    padding: 10px 0;
+    color: #FF8A65;
+}
+
+.profile_upper .detail #follow {
+    padding: 10px 35px;
+    border-radius: 20px;
+    border: none;
+    position: relative;
+    top: -45px;
+    left: 165px;
+    font-size: 20px;
+    color: white;
+    background: #7272f1;
+    cursor: pointer;
+}
+
+.detail #follow:hover {
+    background-color: yellowgreen;
+}
+
+.profile_upper .about{
+    height: 135px;
+    width: 50%;
+    position: absolute;
+    top: 300px;
+    left: 610px;
+    text-align: justify;
+}
+
+.profile_upper .about h4{
+    color: #FF8A65;
+    font-size: 24px;
+}
+
+.profile_bottom .S_list{
+    width: 100%;
+    display: flex;
+    margin: 0 0 20px 0;
+}
+
+/* user profile page */
+
+.u_pro_upper {
+    height: 300px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.u_pro_upper .img{
+    align-content: center;
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    height: 75%;
+}
+
+.u_pro_upper .img img{
+    height: 200px;
+    width: 200px;
+}
+
+.u_pro_upper .detail{
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    height: 25%;
+}
+
+.u_pro_upper .detail h3{
+    font-size: 35px;
+    margin-bottom: -15px;
+}
+
+.u_pro_upper .detail .username{
+    display: grid;
+    justify-content: center;
+    color: #FF8A65;
+}

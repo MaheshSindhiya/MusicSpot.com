@@ -1,0 +1,187 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.header{
+    display: flex;
+    background-color: #181a1d;
+    padding: 5px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.left, .right{
+    width: 20%;
+    display: grid;
+    place-items: center;
+}
+
+.search{
+    width: 60%;
+    position: relative;
+    display: grid;
+    place-items: center;
+    left: 100px;
+}
+
+.header .search form {
+    position: relative;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: all 1s;
+    width: 200px;
+    height: 35px;
+    background: white;
+    box-sizing: border-box;
+    border-radius: 25px;
+    padding: 0px;
+}
+
+input{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    line-height: 30px;
+    outline: 0;
+    border: 0;
+    display: none;
+    font-size: 1em;
+    border-radius: 20px;
+    padding: 10px 10px;
+}
+
+.fa{
+    box-sizing: border-box;
+    padding: 4px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 3px;
+    right: 2px;
+    border-radius: 50%;
+    color: #07051a;
+    text-align: center;
+    font-size: 1.2em;
+    transition: all 1s;
+}
+
+.header .search form:hover{
+    width: 400px;
+    cursor: pointer;
+}
+
+.header .search form:hover input{
+    display: block;
+}
+
+.header .search form:hover .fa{
+    background: #07051a;
+    color: white;
+}
+
+.action{
+    position: absolute;
+    top: 5px;    
+    right: 100px;    
+}
+
+.action .profile{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.action .profile img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.action .menu{
+    position: absolute;
+    top: 60px;
+    right: -10px;
+    padding: 10px 20px;
+    margin-right: 10px;
+    background: #d3d3d3;
+    width: 140px;
+    box-sizing: 0 5px 25px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.action .menu.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.action .menu::before{
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: 28px;
+    width: 20px;
+    height: 20px;
+    background: #d3d3d3;
+    transform: rotate(45deg);
+}
+
+.action .menu h3{
+     width: 100%;
+     text-align: center;
+     font-size: 18px;
+     padding: 20px 0;
+     font-weight: 500;
+     color: #555;
+     line-height: 1.2em;
+}
+
+.action .menu h3 span{
+    font-size: 14px;
+    color: #ec6969;
+    font-weight: 400;    
+}
+
+.action .menu ul li{
+    list-style-type: none;
+    padding: 10px 0;
+    border-top: 1px solid black;
+    display: flex;
+    align-items: center;
+}
+
+.action .menu ul li img{
+    max-width: 20px;
+    margin-right: 10px;
+    opacity: 0.5;
+    transition: 00.5s;
+}
+
+.action .menu ul li:hover img{
+    opacity: 1;
+}
+
+.action .menu ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.action .menu ul li:hover a{
+    color: #ff5d94;
+}

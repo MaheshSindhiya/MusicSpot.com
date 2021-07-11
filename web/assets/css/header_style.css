@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #d3d3d3;
+}
+
+:root{
+    --pri_col: #14213d;
+    --sec_col: #fca311;
+    --ex1: black;
+    --ex2: white;
+}
+
+header{
+    height: 75px;
+    background-color: var(--ex2); 
+    width: 100%;
+}
+
+.pages{  
+    float: right;
+    margin-top: 29px;
+    margin-bottom: auto;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.pages a{
+    font-family: monospace;
+    text-decoration: none;
+    color: var(--pri_col);
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: none;
+    border-radius: 15px;
+    padding: 7px;
+    transition: background-color 2s;
+}
+
+.pages a:hover{
+    background-color: var(--pri_col);
+    color: var(--ex2);
+    border-radius: 15px;
+    padding: 7px;
+    display: inline;
+}
+
+.logo{
+    float: left;
+    margin-left: 20px;
+}
